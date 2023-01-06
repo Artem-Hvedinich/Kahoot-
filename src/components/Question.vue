@@ -1,17 +1,26 @@
 <template>
-  <div class="game_wrapper">
+  <div class="game_wrapper pb-10">
     <h2> {{ items.question }}</h2>
-    <div class="answer mt2">
+    <div class="answer mt-3">
       <p v-for="{answer} in items.answers">{{ answer }}</p>
     </div>
+
+    <Timer :time="10"></Timer>
+
   </div>
 </template>
 
 <script>
 import {mapGetters} from "vuex";
+import Timer from "@/utils/Timer.vue";
 
 export default {
   name: "Question",
+  components: {Timer},
+  data(){
+    return{
+    }
+  },
   computed: {
     ...mapGetters({
       items: 'question/getQuestionItems',
@@ -20,7 +29,7 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .game_wrapper {
   display: flex;
   flex-direction: column;
@@ -40,19 +49,20 @@ export default {
       border-radius: 20px;
 
       &:nth-child(1) {
-        background: red;
+
+        background: linear-gradient(135deg, #fdd819 0%, #e80505 120%);
       }
 
       &:nth-child(2) {
-        background: blue;
+        background: linear-gradient(#52e5e7, #130c87);
       }
 
       &:nth-child(3) {
-        background: yellow;
+        background: linear-gradient(#f0ffc0, #58cffb);
       }
 
       &:nth-child(4) {
-        background: green;
+        background: linear-gradient(#92ffc0, #002661);
       }
     }
   }
