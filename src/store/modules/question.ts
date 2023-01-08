@@ -9,7 +9,7 @@ export default {
     // STATE
     state: {
         questionItems: {
-            question: 'Как звали?',
+            question: 'Как звали тебя когда, ты был молодой?',
             answers: [
                 {answer: 'Катя', checked: true},
                 {answer: 'Артем', checked: false},

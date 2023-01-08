@@ -2,9 +2,7 @@
   <header>
     <div class="top_wrapper">
       <img src="/public/favicon.ico" alt="icon">
-      <router-link to="/">
-        <h1>Kahoot!</h1>
-      </router-link>
+      <router-link to="/"><h1>Kahoot!</h1></router-link>
       <router-link to="/game">Играть</router-link>
     </div>
   </header>
@@ -43,7 +41,7 @@ header {
   & a {
     background: grey;
     padding: 0.2rem 0.6rem;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     color: white;
 
     &.router-link-active {

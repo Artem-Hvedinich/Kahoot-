@@ -1,6 +1,8 @@
 <template>
   <Header/>
-  <RouterView></RouterView>
+  <div class="wrapper">
+    <RouterView></RouterView>
+  </div>
 </template>
 
 <script>
@@ -16,6 +18,13 @@ export default {
 }
 </script>
 <style lang="scss">
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
 @for $i from 1 through 20 {
   .mt-#{$i} {
     margin-top: 4px * $i !important;
