@@ -1,13 +1,18 @@
 <template>
   <div class="created_modal">
-
-    <input>
+    <input v-model="title">
   </div>
 </template>
 
 <script>
 export default {
-  name: "CreatedModal"
+  name: "CreatedModal",
+  props: {componentData: Object},
+  data() {
+    return {
+      title: this.componentData.title || ''
+    }
+  }
 }
 </script>
 

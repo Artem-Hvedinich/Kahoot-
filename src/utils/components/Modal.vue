@@ -1,7 +1,7 @@
 <template>
   <div class="modal" @click="closeModal"/>
   <div class="modal_wrapper">
-    <div class="close_wrapper" @click="closeModal">
+    <div :style="{borderRadius: borderRad}" class="close_wrapper" @click="closeModal">
       <div class="close"/>
     </div>
     <slot></slot>
@@ -11,7 +11,8 @@
 <script>
 export default {
   props: {
-    componentData: Object
+    componentData: Object,
+    borderRad: {type: String, default: 'none'}
   },
   name: "Modal",
   methods: {

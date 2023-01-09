@@ -29,11 +29,13 @@ export default {
       return wordDeclension(num, 'вопрос', 'вопросов', 'вопросов')
     },
     openCreateModal() {
-      this.$store.dispatch('modal/showVModal', {component: createdModal, data: {tr: 'asd'}})
+      this.$store.dispatch('modal/showVModal', {component: createdModal})
     },
     editModal(id) {
-      let store = this.$store.getters['gameLists/getGameListFromId'](id)
-      this.$store.dispatch('modal/showVModal', {component: createdModal, data: store})
+      this.$store.dispatch('modal/showVModal', {
+        component: createdModal,
+        data: this.$store.getters['gameLists/getGameListFromId'](id)
+      })
     }
   }
 }
