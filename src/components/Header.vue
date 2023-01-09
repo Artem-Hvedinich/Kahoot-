@@ -1,10 +1,8 @@
 <template>
   <header>
-    <div class="top_wrapper">
-      <img src="/public/favicon.ico" alt="icon">
-      <router-link to="/"><h1>Kahoot!</h1></router-link>
-      <router-link to="/game">Играть</router-link>
-    </div>
+    <img src="/public/favicon.ico" alt="icon">
+    <router-link to="/"><h1>Kahoot!</h1></router-link>
+    <router-link to="/game">Играть</router-link>
   </header>
 </template>
 
@@ -17,14 +15,12 @@ export default {
 
 <style lang="scss">
 header {
-  & .top_wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 60px;
-    padding: 0 1rem;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  padding: 0 1rem;
 
   & img {
     width: 32px;
@@ -41,7 +37,7 @@ header {
   & a {
     background: grey;
     padding: 0.2rem 0.6rem;
-    border-radius: var(--border-radius);
+    border-radius: var(--border-radius-md);
     color: white;
 
     &.router-link-active {

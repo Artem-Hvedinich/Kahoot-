@@ -44,7 +44,7 @@ export default {
   height: 20px;
   background: rgba(255, 255, 255, 0.25);
   overflow: hidden;
-  border-radius: var(--border-radius);
+  border-radius: var(--border-radius-md);
 
   & .progressbar {
     position: absolute;
@@ -54,7 +54,7 @@ export default {
     width: 100%;
     padding: 0 20px;
     transition-delay: 10ms;
-    border-radius: var(--border-radius);
+    border-radius: var(--border-radius-md);
   }
 }
 </style>

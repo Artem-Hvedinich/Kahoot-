@@ -13,7 +13,7 @@
 
 <script>
 import {mapGetters} from "vuex";
-import Timer from "@/utils/Timer.vue";
+import Timer from "@/utils/components/Timer.vue";
 import Answers from "@/components/game/Answers.vue";
 
 export default {

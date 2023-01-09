@@ -11,7 +11,7 @@
 
 <script>
 import {mapGetters} from "vuex";
-import Timer from "@/utils/Timer.vue";
+import Timer from "@/utils/components/Timer.vue";
 
 export default {
   name: "Answers",
@@ -41,7 +41,7 @@ export default {
   grid-template-rows: repeat(2, 200px);
   background: rgba(255, 255, 255, 0.4);
   padding: 20px;
-  border-radius: var(--border-radius);
+  border-radius: var(--border-radius-md);
   gap: 20px;
 
   & div {
@@ -49,7 +49,7 @@ export default {
     justify-content: center;
     align-items: center;
     position: relative;
-    border-radius: var(--border-radius);
+    border-radius: var(--border-radius-md);
 
     &.is_false {
       opacity: 0.6;

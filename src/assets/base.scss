@@ -1,9 +1,14 @@
 :root {
   --bg-color: linear-gradient(#ce9ffc, #7367f0);
   --font-color: #282c34;
-  --border-radius: 16px;
+  --border-radius-sm: 8px;
+  --border-radius-md: 16px;
+  --border-radius-xl: 32px;
 }
 
-.wrapper {
-
+button {
+  background: #4343ff;
+  color: white;
+  border-radius: var(--border-radius-sm);
+  border: none;
 }

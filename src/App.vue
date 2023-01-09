@@ -1,20 +1,26 @@
 <template>
-  <Header/>
   <div class="wrapper">
-    <RouterView></RouterView>
+    <Header/>
+    <RouterView/>
   </div>
+  <Modal v-if="!show" @close="closeModal" @open="openModal" class="modal"/>
 </template>
 
 <script>
 import {RouterView} from 'vue-router'
 import Header from "@/components/Header.vue";
+import Modal from "@/utils/components/Modal.vue";
+import modal_mixin from "@/utils/mixin/modal_mixin.vue";
 
 export default {
   name: 'app',
+  mixins: [modal_mixin],
   components: {
     Header,
-    RouterView
+    RouterView,
+    Modal
   },
+
 }
 </script>
 <style lang="scss">
@@ -23,6 +29,31 @@ export default {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  max-width: 1280px;
+}
+
+
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+
+  &.right {
+    transform: rotate(-45deg);
+  }
+
+  &.left {
+    transform: rotate(135deg);
+  }
+
+  &.up {
+    transform: rotate(-135deg);
+  }
+
+  &.down {
+    transform: rotate(45deg);
+  }
 }
 
 @for $i from 1 through 20 {
