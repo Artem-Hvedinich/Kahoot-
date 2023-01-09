@@ -17,3 +17,8 @@
     background: var(--bg-color);
     color: var(--font-color);
 }
+
+:hover, a {
+    transition-delay: 0.1s;
+    transition-duration: 0.3s;
+}

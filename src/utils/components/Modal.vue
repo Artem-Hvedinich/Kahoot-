@@ -1,18 +1,24 @@
 <template>
-  <div class="modal"/>
+  <div class="modal" @click="closeModal"/>
   <div class="modal_wrapper">
-
+    <div class="close_wrapper" @click="closeModal">
+      <div class="close"/>
+    </div>
+    <slot></slot>
   </div>
 </template>
 
 <script>
 export default {
   props: {
-    width: String,
-    height: String,
-    padding: String
+    componentData: Object
   },
-  name: "Modal"
+  name: "Modal",
+  methods: {
+    closeModal() {
+      this.$store.dispatch('modal/closeVModal')
+    }
+  }
 }
 </script>
 
@@ -28,11 +34,34 @@ export default {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(50%, 50%);
+    transform: translate(-50%, -50%);
     background: white;
-    width: 600px;
-    height: 300px;
+    //width: 600px;
+    //height: 300px;
     opacity: 1;
+
+    & .close_wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      position: absolute;
+      right: -20px;
+      top: -20px;
+
+      &:hover {
+        background: rgba(203, 203, 203, 0.44);
+      }
+
+      & .close {
+        background: #cbcbcb;
+        width: 15px;
+        height: 15px;
+      }
+    }
+
   }
 }
 </style>

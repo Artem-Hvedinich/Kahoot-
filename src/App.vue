@@ -3,7 +3,11 @@
     <Header/>
     <RouterView/>
   </div>
-  <Modal v-if="!show" @close="closeModal" @open="openModal" class="modal"/>
+  <Modal v-if="isShowVModal" class="modal">
+    <component v-bind:is="component" v-bind:componentData="componentData">
+
+    </component>
+  </Modal>
 </template>
 
 <script>
@@ -20,7 +24,6 @@ export default {
     RouterView,
     Modal
   },
-
 }
 </script>
 <style lang="scss">

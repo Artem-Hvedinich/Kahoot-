@@ -34,8 +34,8 @@ main {
       height: 100px;
       border-radius: var(--border-radius-md);
       background: rgba(255, 255, 255, 0.5);
-      transition-delay: 0.1s;
-      transition-duration: 0.3s;
+      //transition-delay: 0.1s;
+      //transition-duration: 0.3s;
 
       &:hover {
         background: rgba(255, 255, 255, 0.7);

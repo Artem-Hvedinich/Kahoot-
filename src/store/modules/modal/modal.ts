@@ -14,17 +14,14 @@ const state: modalType = {
 
 
 // GETTERS
-const getters: GetterTree<modalType, RootState>
-    & Getters
-    = {
+const getters: GetterTree<modalType, RootState> & Getters = {
     isShowVModal: (state) => state.isShowVModal || false,
     getComponent: (state) => state.component || null,
     getComponentData: (state) => state.data || {},
 }
 
 // ACTIONS
-const actions: ActionTree<modalType, RootState> & Actions
-    = {
+const actions: ActionTree<modalType, RootState> & Actions = {
     /* loader page */
     showVModal({commit}, {component, data = {}}) {
         commit('setShowModal', true);
@@ -39,9 +36,7 @@ const actions: ActionTree<modalType, RootState> & Actions
 }
 
 // MUTATIONS
-const mutations: MutationTree<modalType>
-    & Mutations
-    = {
+const mutations: MutationTree<modalType> & Mutations = {
     setShowModal(state, value: Boolean) {
         state.isShowVModal = value;
     },

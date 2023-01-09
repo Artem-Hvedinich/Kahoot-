@@ -1,16 +1,14 @@
 <script>
+import {mapGetters} from "vuex";
+
 export default {
   name: "modal_mixin",
-  data() {
-    return {show: false}
-  },
-  methods: {
-    openModal() {
-      this.show = true
-    },
-    closeModal() {
-      this.show = false
-    }
+  computed: {
+    ...mapGetters({
+      isShowVModal: 'modal/isShowVModal',
+      component: 'modal/getComponent',
+      componentData: 'modal/getComponentData',
+    })
   }
 }
 </script>
